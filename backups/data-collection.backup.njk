@@ -70,9 +70,9 @@ permalink: /data-collection/
         <p><strong>Quadrat:</strong> {{ project.quadratSize }}</p>
 
         <div class="callout">
-          Only sunflower seedlings whose stem base is inside the 1m × 1m quadrat will be counted. The automatic count does not include seedlings outside the quadrat, even if their leaves overlap the frame.
-
-          </div>
+          Count only emerged sunflower seedlings. Do not count ungerminated seeds.
+          If a seedling is damaged but clearly emerged and rooted inside the quadrat, count it.
+        </div>
       </div>
 
       <div class="card">
@@ -145,6 +145,16 @@ permalink: /data-collection/
 
         <li>
           <div>
+            <h3>Record metadata</h3>
+            <p class="muted">
+              Record sample ID, date, time, GPS coordinates, row direction, manual count, and notes about
+              soil crust, pest damage, waterlogging, weeds, or missing rows.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <div>
             <h3>Upload immediately</h3>
             <p class="muted">
               Upload the images before leaving the field if signal is available. If not, upload as soon as
@@ -176,7 +186,10 @@ permalink: /data-collection/
         <ul class="checklist">
           <li>Enable Location Services for Camera on the iPhone before fieldwork.</li>
           <li>Use the GPS button below to capture a browser coordinate on the collection page.</li>
-          </ul>
+          <li>Record coordinates manually in the upload form as backup.</li>
+          <li>If GPS is weak, wait 10-20 seconds before recording the coordinate.</li>
+          <li>Do not rely only on photo EXIF because it may be removed during upload/export.</li>
+        </ul>
 
         <button class="button button-secondary" type="button" onclick="getGps()">Get current GPS</button>
 
@@ -184,6 +197,40 @@ permalink: /data-collection/
           <label for="gps-output">GPS output</label>
           <textarea id="gps-output" readonly placeholder="GPS coordinate will appear here."></textarea>
         </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Sample ID and file naming</h2>
+
+      <p>
+        Use one unique sample ID per quadrat. Keep the same ID for the main image,
+        overview image, manual count, and notes.
+      </p>
+
+      <div class="grid grid-2">
+        <div>
+          <div class="form-row">
+            <label for="sample-number">Quadrat number</label>
+            <input id="sample-number" type="number" min="1" value="1">
+          </div>
+
+          <button class="button" type="button" onclick="makeSampleId()">Generate sample ID</button>
+        </div>
+
+        <div>
+          <div class="form-row">
+            <label for="sample-output">Suggested sample ID</label>
+            <textarea id="sample-output" readonly></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout">
+        Example file names:<br>
+        SUNFLOWER_2026-05-07_Q001_MAIN.jpg<br>
+        SUNFLOWER_2026-05-07_Q001_OVERVIEW.jpg<br>
+        SUNFLOWER_2026-05-07_Q001_CLOSEUP.jpg
       </div>
     </section>
 
@@ -201,13 +248,51 @@ permalink: /data-collection/
           Upload field images
         </a>
 
+        <a class="button" href="{{ project.googleDriveFolderUrl }}" target="_blank" rel="noopener">
+          Open Drive folder
+        </a>
       </div>
 
+      <p class="footer">
+        If these buttons return to this section, replace the upload links in src/_data/project.json.
+      </p>
+    </section>
 
+    <section class="card">
+      <h2>Recommended Google Form fields</h2>
+
+      <ul class="checklist">
+        <li>Sample ID</li>
+        <li>Date of collection</li>
+        <li>Collector name</li>
+        <li>GPS latitude</li>
+        <li>GPS longitude</li>
+        <li>Manual standing count inside 1 m x 1 m quadrat</li>
+        <li>Main quadrat image upload</li>
+        <li>Overview image upload</li>
+        <li>Optional close-up image upload</li>
+        <li>Notes about weeds, gaps, damage, soil crust, water stress, or poor image quality</li>
+      </ul>
     </section>
   </main>
 
   <script>
+    function padNumber(value, length) {
+      return String(value).padStart(length, "0");
+    }
+
+    function makeSampleId() {
+      const number = document.getElementById("sample-number").value || 1;
+      const sampleId = "SUNFLOWER_2026-05-07_Q" + padNumber(number, 3);
+      const output = document.getElementById("sample-output");
+
+      output.value =
+        sampleId + "\n\n" +
+        "Main photo: " + sampleId + "_MAIN.jpg\n" +
+        "Overview photo: " + sampleId + "_OVERVIEW.jpg\n" +
+        "Optional close-up: " + sampleId + "_CLOSEUP.jpg";
+    }
+
     function getGps() {
       const output = document.getElementById("gps-output");
 
@@ -241,8 +326,8 @@ permalink: /data-collection/
         }
       );
     }
-</script>
+
+    makeSampleId();
+  </script>
 </body>
 </html>
-
-
