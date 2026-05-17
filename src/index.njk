@@ -1,0 +1,69 @@
+﻿---
+title: Sunflower Field Monitor
+permalink: /
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sunflower Field Monitor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+
+<body>
+  <main class="page">
+    <nav class="nav">
+      <div class="brand">Sunflower Field Monitor</div>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/gdd-sunflowers/">GDD Monitor</a>
+        <a href="/data-collection/">Data Collection</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="card">
+        <p class="eyebrow">Field experiment</p>
+        <h1>Sunflower monitoring from sowing to emergence.</h1>
+        <p class="muted">
+          This site combines weather-based growing degree days with a field image collection protocol
+          for sunflower standing count.
+        </p>
+
+        <div class="nav-links">
+          <a class="button button-primary" href="/gdd-sunflowers/">Open GDD Monitor</a>
+          <a class="button button-secondary" href="/data-collection/">Open Data Collection Protocol</a>
+        </div>
+      </div>
+
+      <div class="card card-soft">
+        <p class="eyebrow">Field details</p>
+        <h2>{{ project.fieldName }}</h2>
+        <p><strong>Crop:</strong> {{ project.crop }}</p>
+        <p><strong>Sowing date:</strong> {{ project.sowingDate }}</p>
+        <p><strong>Coordinates:</strong> {{ project.lat }}, {{ project.lon }}</p>
+        <p><strong>Quadrat:</strong> {{ project.quadratSize }}</p>
+      </div>
+    </section>
+
+    <section class="grid grid-3">
+      <div class="metric">
+        <strong>GDD</strong>
+        <span class="muted">Temperature-based crop development monitoring.</span>
+      </div>
+
+      <div class="metric">
+        <strong>1 m x 1 m</strong>
+        <span class="muted">Standard quadrat for standing count photos.</span>
+      </div>
+
+      <div class="metric">
+        <strong>iPhone 16</strong>
+        <span class="muted">Consistent field images with GPS metadata.</span>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

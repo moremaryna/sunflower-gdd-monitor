@@ -1,0 +1,12 @@
+﻿{
+  "fieldName": "Sunflower field",
+  "crop": "sunflower",
+  "sowingDate": "2026-05-07",
+  "lat": 52.8457222,
+  "lon": 0.7285556,
+  "quadratSize": "1 m x 1 m",
+  "mainPhotoRatio": "1:1 square",
+  "overviewPhotoRatio": "4:3 landscape",
+  "googleUploadUrl": "#upload-setup",
+  "googleDriveFolderUrl": "#upload-setup"
+}

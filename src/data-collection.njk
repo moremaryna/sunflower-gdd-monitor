@@ -1,0 +1,333 @@
+﻿---
+title: Sunflower Data Collection Protocol
+permalink: /data-collection/
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sunflower Data Collection Protocol</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+
+<body>
+  <main class="page">
+    <nav class="nav">
+      <div class="brand">Sunflower Field Monitor</div>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/gdd-sunflowers/">GDD Monitor</a>
+        <a href="/data-collection/">Data Collection</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="card">
+        <p class="eyebrow">Field protocol</p>
+        <h1>Data Collection for Sunflower Standing Count</h1>
+        <p class="muted">
+          Use this protocol for 1 m x 1 m quadrat photos of sunflower seedlings sown on
+          <strong>{{ project.sowingDate }}</strong>. The goal is to collect repeatable images
+          for manual counting now and computer vision analysis later.
+        </p>
+
+        <div class="nav-links">
+          <a class="button button-primary" href="{{ project.googleUploadUrl }}" target="_blank" rel="noopener">
+            Upload field images
+          </a>
+          <a class="button" href="/gdd-sunflowers/">View GDD monitor</a>
+        </div>
+      </div>
+
+      <div class="card card-soft">
+        <p class="eyebrow">Minimum technical requirements</p>
+
+        <div class="grid">
+          <div class="metric">
+            <strong>1:1 square</strong>
+            <span class="muted">Main quadrat photo ratio.</span>
+          </div>
+          <div class="metric">
+            <strong>GPS on</strong>
+            <span class="muted">Camera location metadata plus manual coordinate note.</span>
+          </div>
+          <div class="metric">
+            <strong>1x lens</strong>
+            <span class="muted">No digital zoom. Keep the phone parallel to the ground.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid grid-2">
+      <div class="card">
+        <h2>Field details</h2>
+        <p><strong>Crop:</strong> {{ project.crop }}</p>
+        <p><strong>Sowing date:</strong> {{ project.sowingDate }}</p>
+        <p><strong>Field coordinates:</strong> {{ project.lat }}, {{ project.lon }}</p>
+        <p><strong>Quadrat:</strong> {{ project.quadratSize }}</p>
+
+        <div class="callout">
+          Count only emerged sunflower seedlings. Do not count ungerminated seeds.
+          If a seedling is damaged but clearly emerged and rooted inside the quadrat, count it.
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>iPhone 16 camera setup</h2>
+        <ul class="checklist">
+          <li>Use the main camera at 1x. Avoid ultra-wide distortion and digital zoom.</li>
+          <li>Use square mode for the main quadrat image, or crop to 1:1 later.</li>
+          <li>Keep all four quadrat edges visible inside the image.</li>
+          <li>Hold the phone directly above the quadrat, parallel to the soil surface.</li>
+          <li>Tap to focus on the soil and seedlings before taking the photo.</li>
+          <li>Clean the lens before starting the field session.</li>
+          <li>Do not use portrait mode, filters, live photo effects, or heavy editing.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Sampling protocol: 1 m x 1 m quadrat</h2>
+
+      <ol class="steps">
+        <li>
+          <div>
+            <h3>Choose sampling points</h3>
+            <p class="muted">
+              Use a W-shaped walk or straight transect. Avoid field edges, gateways, wheel tracks,
+              headlands, and obviously damaged areas unless they are sampled as a separate zone.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <div>
+            <h3>Place the quadrat</h3>
+            <p class="muted">
+              Place the 1 m x 1 m frame flat on the soil. Do not move seedlings to make the image look better.
+              The inner edge of the frame defines the counting area.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <div>
+            <h3>Use a border rule</h3>
+            <p class="muted">
+              Count seedlings whose stem base is inside the quadrat. For border plants, use one consistent rule:
+              count plants touching the top and left edges; exclude plants touching the bottom and right edges.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <div>
+            <h3>Take the main count photo</h3>
+            <p class="muted">
+              Take one top-down 1:1 square photo. The quadrat should fill 80-90% of the image,
+              with all four edges visible. Avoid shadows, feet, bags, or tape covering seedlings.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <div>
+            <h3>Take one overview photo</h3>
+            <p class="muted">
+              Take one 4:3 landscape overview photo from standing height showing the quadrat in its surrounding
+              row context. This helps interpret gaps, row direction, soil condition, and field variability.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <div>
+            <h3>Record metadata</h3>
+            <p class="muted">
+              Record sample ID, date, time, GPS coordinates, row direction, manual count, and notes about
+              soil crust, pest damage, waterlogging, weeds, or missing rows.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <div>
+            <h3>Upload immediately</h3>
+            <p class="muted">
+              Upload the images before leaving the field if signal is available. If not, upload as soon as
+              the phone reconnects to the internet.
+            </p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="grid grid-2">
+      <div class="card">
+        <h2>Photo requirements</h2>
+
+        <ul class="checklist">
+          <li>Main quadrat photo ratio: {{ project.mainPhotoRatio }}.</li>
+          <li>Overview photo ratio: {{ project.overviewPhotoRatio }}.</li>
+          <li>Use high-resolution original images, not screenshots.</li>
+          <li>Use natural light. Avoid very harsh shadows when possible.</li>
+          <li>If seedlings overlap or weeds are present, take an extra close-up image.</li>
+          <li>Do not compress images through messaging apps before upload.</li>
+          <li>Keep EXIF/location metadata if possible.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Geolocation requirements</h2>
+
+        <ul class="checklist">
+          <li>Enable Location Services for Camera on the iPhone before fieldwork.</li>
+          <li>Use the GPS button below to capture a browser coordinate on the collection page.</li>
+          <li>Record coordinates manually in the upload form as backup.</li>
+          <li>If GPS is weak, wait 10-20 seconds before recording the coordinate.</li>
+          <li>Do not rely only on photo EXIF because it may be removed during upload/export.</li>
+        </ul>
+
+        <button class="button button-secondary" type="button" onclick="getGps()">Get current GPS</button>
+
+        <div class="form-row" style="margin-top: 16px;">
+          <label for="gps-output">GPS output</label>
+          <textarea id="gps-output" readonly placeholder="GPS coordinate will appear here."></textarea>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Sample ID and file naming</h2>
+
+      <p>
+        Use one unique sample ID per quadrat. Keep the same ID for the main image,
+        overview image, manual count, and notes.
+      </p>
+
+      <div class="grid grid-2">
+        <div>
+          <div class="form-row">
+            <label for="sample-number">Quadrat number</label>
+            <input id="sample-number" type="number" min="1" value="1">
+          </div>
+
+          <button class="button" type="button" onclick="makeSampleId()">Generate sample ID</button>
+        </div>
+
+        <div>
+          <div class="form-row">
+            <label for="sample-output">Suggested sample ID</label>
+            <textarea id="sample-output" readonly></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout">
+        Example file names:<br>
+        SUNFLOWER_2026-05-07_Q001_MAIN.jpg<br>
+        SUNFLOWER_2026-05-07_Q001_OVERVIEW.jpg<br>
+        SUNFLOWER_2026-05-07_Q001_CLOSEUP.jpg
+      </div>
+    </section>
+
+    <section class="card" id="upload-setup">
+      <h2>Upload images to Google Drive</h2>
+
+      <p>
+        For a static Eleventy page, the simplest reliable upload method is a Google Form with a
+        file-upload question. Google Forms saves uploaded files into Google Drive and also captures
+        your metadata fields.
+      </p>
+
+      <div class="nav-links">
+        <a class="button button-primary" href="{{ project.googleUploadUrl }}" target="_blank" rel="noopener">
+          Upload field images
+        </a>
+
+        <a class="button" href="{{ project.googleDriveFolderUrl }}" target="_blank" rel="noopener">
+          Open Drive folder
+        </a>
+      </div>
+
+      <p class="footer">
+        If these buttons return to this section, replace the upload links in src/_data/project.json.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Recommended Google Form fields</h2>
+
+      <ul class="checklist">
+        <li>Sample ID</li>
+        <li>Date of collection</li>
+        <li>Collector name</li>
+        <li>GPS latitude</li>
+        <li>GPS longitude</li>
+        <li>Manual standing count inside 1 m x 1 m quadrat</li>
+        <li>Main quadrat image upload</li>
+        <li>Overview image upload</li>
+        <li>Optional close-up image upload</li>
+        <li>Notes about weeds, gaps, damage, soil crust, water stress, or poor image quality</li>
+      </ul>
+    </section>
+  </main>
+
+  <script>
+    function padNumber(value, length) {
+      return String(value).padStart(length, "0");
+    }
+
+    function makeSampleId() {
+      const number = document.getElementById("sample-number").value || 1;
+      const sampleId = "SUNFLOWER_2026-05-07_Q" + padNumber(number, 3);
+      const output = document.getElementById("sample-output");
+
+      output.value =
+        sampleId + "\n\n" +
+        "Main photo: " + sampleId + "_MAIN.jpg\n" +
+        "Overview photo: " + sampleId + "_OVERVIEW.jpg\n" +
+        "Optional close-up: " + sampleId + "_CLOSEUP.jpg";
+    }
+
+    function getGps() {
+      const output = document.getElementById("gps-output");
+
+      if (!navigator.geolocation) {
+        output.value = "Geolocation is not available in this browser.";
+        return;
+      }
+
+      output.value = "Getting GPS coordinate...";
+
+      navigator.geolocation.getCurrentPosition(
+        function (position) {
+          const lat = position.coords.latitude.toFixed(7);
+          const lon = position.coords.longitude.toFixed(7);
+          const accuracy = Math.round(position.coords.accuracy);
+          const timestamp = new Date(position.timestamp).toISOString();
+
+          output.value =
+            "Latitude: " + lat + "\n" +
+            "Longitude: " + lon + "\n" +
+            "Accuracy: approx. " + accuracy + " m\n" +
+            "Timestamp: " + timestamp;
+        },
+        function (error) {
+          output.value = "Could not get GPS: " + error.message;
+        },
+        {
+          enableHighAccuracy: true,
+          timeout: 15000,
+          maximumAge: 0
+        }
+      );
+    }
+
+    makeSampleId();
+  </script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+﻿---
+title: Sunflower GDD Monitor
+permalink: /gdd-sunflowers/
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sunflower GDD Monitor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+
+<body>
+  <main class="page">
+    <nav class="nav">
+      <div class="brand">Sunflower Field Monitor</div>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/gdd-sunflowers/">GDD Monitor</a>
+        <a href="/data-collection/">Data Collection</a>
+      </div>
+    </nav>
+
+    {% set data = gdd_sunflowers %}
+    {% set location = data.location %}
+    {% set days = data.days %}
+    {% set latest = days[days.length - 1] %}
+
+    <section class="hero">
+      <div class="card">
+        <p class="eyebrow">Weather-based monitoring</p>
+        <h1>Sunflower GDD Monitor</h1>
+        <p class="muted">
+          Growing degree days are calculated from daily minimum and maximum temperature
+          for the sunflower field sown on {{ project.sowingDate }}.
+        </p>
+
+        <div class="grid grid-3">
+          <div class="metric">
+            <strong>{{ location.baseTempC }}&deg;C</strong>
+            <span class="muted">Base temperature</span>
+          </div>
+          <div class="metric">
+            <strong>{{ location.upperTempC }}&deg;C</strong>
+            <span class="muted">Upper cap</span>
+          </div>
+          <div class="metric">
+            <strong>{{ location.seasonStart }}</strong>
+            <span class="muted">Season start</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card-soft">
+        <p class="eyebrow">Current cumulative GDD</p>
+
+        {% if latest %}
+          <div class="big-number">{{ latest.cumulativeGdd }}</div>
+          <p>Updated to <strong>{{ latest.date }}</strong></p>
+          <p>
+            Last daily GDD: <strong>{{ latest.dailyGdd }}</strong><br>
+            Tmin {{ latest.tminC }}&deg;C and Tmax {{ latest.tmaxC }}&deg;C
+          </p>
+        {% else %}
+          <h2>No GDD rows yet</h2>
+          <p class="muted">Run the daily updater after a completed weather day is available.</p>
+        {% endif %}
+      </div>
+    </section>
+
+    <section class="grid grid-2">
+      <div class="card">
+        <h2>Field location</h2>
+        <p><strong>{{ location.name }}</strong></p>
+        <p>Coordinates: <strong>{{ location.lat }}, {{ location.lon }}</strong></p>
+        <p>Crop: <strong>{{ location.crop }}</strong></p>
+        <p>Sowing date: <strong>{{ project.sowingDate }}</strong></p>
+      </div>
+
+      <div class="card">
+        <h2>Simple interpretation</h2>
+
+        {% if latest %}
+          {% if latest.cumulativeGdd < 138 %}
+            <p>Early stage. Watch for germination and first emergence.</p>
+          {% elif latest.cumulativeGdd < 249 %}
+            <p>Emergence zone. Start checking seedling establishment in the field.</p>
+          {% elif latest.cumulativeGdd < 935 %}
+            <p>Vegetative growth. Good time to monitor leaf development and plant stand.</p>
+          {% elif latest.cumulativeGdd < 1255 %}
+            <p>Flowering period is approaching or active. Watch heat and water stress.</p>
+          {% elif latest.cumulativeGdd < 1780 %}
+            <p>Seed filling and maturity development. Monitor stress and head condition.</p>
+          {% else %}
+            <p>Late maturity zone. Field observations are more important than GDD alone now.</p>
+          {% endif %}
+        {% else %}
+          <p>Interpretation will appear after the first daily update.</p>
+        {% endif %}
+
+        <a class="button button-secondary" href="/data-collection/">Collect standing count data</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Daily records</h2>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Tmin</th>
+              <th>Tmax</th>
+              <th>Daily GDD</th>
+              <th>Cumulative GDD</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for day in days | reverse %}
+              <tr>
+                <td>{{ day.date }}</td>
+                <td>{{ day.tminC }}&deg;C</td>
+                <td>{{ day.tmaxC }}&deg;C</td>
+                <td>{{ day.dailyGdd }}</td>
+                <td>{{ day.cumulativeGdd }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+      <p class="footer">
+        This is a simple monitoring model, not a crop diagnosis. Always compare with real field observations.
+      </p>
+    </section>
+  </main>
+</body>
+</html>

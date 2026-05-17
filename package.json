@@ -1,0 +1,23 @@
+{
+  "name": "sunflower-gdd-monitor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "update:gdd": "node scripts/update-gdd.js",
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "deploy": "npm run build && firebase deploy --only hosting"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.5"
+  },
+  "devDependencies": {
+    "firebase-tools": "^15.18.0"
+  }
+}

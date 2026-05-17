@@ -1,0 +1,24 @@
+{
+  "location": {
+    "name": "Sunflower field",
+    "slug": "sunflower-field",
+    "lat": 52.8457222,
+    "lon": 0.7285556,
+    "baseTempC": 6.7,
+    "upperTempC": 30,
+    "seasonStart": "2026-05-07",
+    "crop": "sunflower"
+  },
+  "lastUpdatedAt": "2026-05-17T19:31:00.066Z",
+  "days": [
+    {
+      "date": "2026-05-16",
+      "tminC": 3.84,
+      "tmaxC": 13.43,
+      "tavgC": 10.02,
+      "dailyGdd": 1.93,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 1.93
+    }
+  ]
+}
