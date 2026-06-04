@@ -9,7 +9,7 @@
     "seasonStart": "2026-05-07",
     "crop": "sunflower"
   },
-  "lastUpdatedAt": "2026-06-03T09:05:15.432Z",
+  "lastUpdatedAt": "2026-06-04T08:44:54.891Z",
   "days": [
     {
       "date": "2026-05-16",
@@ -163,6 +163,15 @@
       "dailyGdd": 7.97,
       "source": "tomorrow.io",
       "cumulativeGdd": 160.32
+    },
+    {
+      "date": "2026-06-03",
+      "tminC": 11.6,
+      "tmaxC": 18.13,
+      "tavgC": 14.6,
+      "dailyGdd": 8.16,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 168.48
     }
   ]
 }
