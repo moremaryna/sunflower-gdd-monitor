@@ -9,7 +9,11 @@
     "seasonStart": "2026-05-07",
     "crop": "sunflower"
   },
+<<<<<<< HEAD
   "lastUpdatedAt": "2026-07-02T19:42:11.363Z",
+=======
+  "lastUpdatedAt": "2026-07-02T08:28:32.238Z",
+>>>>>>> 8aaa610808e8bbd7c1ae2a8b81fb9699a38c5600
   "days": [
     {
       "date": "2026-05-16",
@@ -21,13 +25,416 @@
       "cumulativeGdd": 1.93
     },
     {
+<<<<<<< HEAD
+=======
+      "date": "2026-05-17",
+      "tminC": 4.94,
+      "tmaxC": 14.38,
+      "tavgC": 10.29,
+      "dailyGdd": 2.96,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 4.89
+    },
+    {
+      "date": "2026-05-18",
+      "tminC": 5.64,
+      "tmaxC": 14.56,
+      "tavgC": 10.73,
+      "dailyGdd": 3.4,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 8.29
+    },
+    {
+      "date": "2026-05-19",
+      "tminC": 9.88,
+      "tmaxC": 17.44,
+      "tavgC": 13.03,
+      "dailyGdd": 6.96,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 15.25
+    },
+    {
+      "date": "2026-05-20",
+      "tminC": 9.26,
+      "tmaxC": 17.45,
+      "tavgC": 13.82,
+      "dailyGdd": 6.66,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 21.91
+    },
+    {
+      "date": "2026-05-22",
+      "tminC": 13.54,
+      "tmaxC": 25,
+      "tavgC": 20.11,
+      "dailyGdd": 12.57,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 34.48
+    },
+    {
+      "date": "2026-05-23",
+      "tminC": 12.22,
+      "tmaxC": 23.68,
+      "tavgC": 18.89,
+      "dailyGdd": 11.25,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 45.73
+    },
+    {
+      "date": "2026-05-24",
+      "tminC": 13.23,
+      "tmaxC": 26.6,
+      "tavgC": 20.32,
+      "dailyGdd": 13.21,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 58.94
+    },
+    {
+      "date": "2026-05-25",
+      "tminC": 15.96,
+      "tmaxC": 30.9,
+      "tavgC": 23.44,
+      "dailyGdd": 16.28,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 75.22
+    },
+    {
+      "date": "2026-05-26",
+      "tminC": 12.94,
+      "tmaxC": 31.48,
+      "tavgC": 21.67,
+      "dailyGdd": 14.77,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 89.99
+    },
+    {
+      "date": "2026-05-27",
+      "tminC": 10.86,
+      "tmaxC": 19.63,
+      "tavgC": 15.27,
+      "dailyGdd": 8.54,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 98.53
+    },
+    {
+      "date": "2026-05-28",
+      "tminC": 11.97,
+      "tmaxC": 24.81,
+      "tavgC": 20.5,
+      "dailyGdd": 11.69,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 110.22
+    },
+    {
+      "date": "2026-05-29",
+      "tminC": 11.97,
+      "tmaxC": 21.85,
+      "tavgC": 17.53,
+      "dailyGdd": 10.21,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 120.43
+    },
+    {
+      "date": "2026-05-30",
+      "tminC": 12.94,
+      "tmaxC": 24.54,
+      "tavgC": 18.82,
+      "dailyGdd": 12.04,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 132.47
+    },
+    {
+      "date": "2026-05-31",
+      "tminC": 11.22,
+      "tmaxC": 21.58,
+      "tavgC": 17.09,
+      "dailyGdd": 9.7,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 142.17
+    },
+    {
+      "date": "2026-06-01",
+      "tminC": 12.23,
+      "tmaxC": 21.54,
+      "tavgC": 17.39,
+      "dailyGdd": 10.18,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 152.35
+    },
+    {
+      "date": "2026-06-02",
+      "tminC": 11.05,
+      "tmaxC": 18.28,
+      "tavgC": 14.52,
+      "dailyGdd": 7.97,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 160.32
+    },
+    {
+      "date": "2026-06-03",
+      "tminC": 11.6,
+      "tmaxC": 18.13,
+      "tavgC": 14.6,
+      "dailyGdd": 8.16,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 168.48
+    },
+    {
+      "date": "2026-06-04",
+      "tminC": 10.53,
+      "tmaxC": 16.95,
+      "tavgC": 13.87,
+      "dailyGdd": 7.04,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 175.52
+    },
+    {
+      "date": "2026-06-05",
+      "tminC": 10,
+      "tmaxC": 17.14,
+      "tavgC": 13.69,
+      "dailyGdd": 6.87,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 182.39
+    },
+    {
+      "date": "2026-06-06",
+      "tminC": 11.19,
+      "tmaxC": 17.04,
+      "tavgC": 13.79,
+      "dailyGdd": 7.41,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 189.8
+    },
+    {
+      "date": "2026-06-07",
+      "tminC": 11.59,
+      "tmaxC": 18.91,
+      "tavgC": 15.33,
+      "dailyGdd": 8.55,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 198.35
+    },
+    {
+      "date": "2026-06-08",
+      "tminC": 7.36,
+      "tmaxC": 15.04,
+      "tavgC": 12.11,
+      "dailyGdd": 4.5,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 202.85
+    },
+    {
+      "date": "2026-06-09",
+      "tminC": 7.55,
+      "tmaxC": 14.6,
+      "tavgC": 11.35,
+      "dailyGdd": 4.37,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 207.22
+    },
+    {
+      "date": "2026-06-10",
+      "tminC": 7.12,
+      "tmaxC": 14.3,
+      "tavgC": 10.48,
+      "dailyGdd": 4.01,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 211.23
+    },
+    {
+      "date": "2026-06-11",
+      "tminC": 8,
+      "tmaxC": 15.32,
+      "tavgC": 12.91,
+      "dailyGdd": 4.96,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 216.19
+    },
+    {
+      "date": "2026-06-12",
+      "tminC": 11.67,
+      "tmaxC": 20.1,
+      "tavgC": 16.41,
+      "dailyGdd": 9.19,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 225.38
+    },
+    {
+      "date": "2026-06-13",
+      "tminC": 10.16,
+      "tmaxC": 16.6,
+      "tavgC": 13.71,
+      "dailyGdd": 6.68,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 232.06
+    },
+    {
+      "date": "2026-06-14",
+      "tminC": 8.12,
+      "tmaxC": 17.08,
+      "tavgC": 12.75,
+      "dailyGdd": 5.9,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 237.96
+    },
+    {
+      "date": "2026-06-15",
+      "tminC": 9.93,
+      "tmaxC": 18.32,
+      "tavgC": 14.38,
+      "dailyGdd": 7.42,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 245.38
+    },
+    {
+      "date": "2026-06-16",
+      "tminC": 12.58,
+      "tmaxC": 21.97,
+      "tavgC": 18.22,
+      "dailyGdd": 10.57,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 255.95
+    },
+    {
+      "date": "2026-06-17",
+      "tminC": 15.38,
+      "tmaxC": 22.94,
+      "tavgC": 18.95,
+      "dailyGdd": 12.46,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 268.41
+    },
+    {
+      "date": "2026-06-18",
+      "tminC": 16.15,
+      "tmaxC": 24.06,
+      "tavgC": 20.05,
+      "dailyGdd": 13.4,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 281.81
+    },
+    {
+      "date": "2026-06-19",
+      "tminC": 17.08,
+      "tmaxC": 27.16,
+      "tavgC": 22.29,
+      "dailyGdd": 15.42,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 297.23
+    },
+    {
+      "date": "2026-06-20",
+      "tminC": 15.67,
+      "tmaxC": 24.59,
+      "tavgC": 19.99,
+      "dailyGdd": 13.43,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 310.66
+    },
+    {
+      "date": "2026-06-21",
+      "tminC": 14.11,
+      "tmaxC": 21.92,
+      "tavgC": 18.58,
+      "dailyGdd": 11.32,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 321.98
+    },
+    {
+      "date": "2026-06-22",
+      "tminC": 13.98,
+      "tmaxC": 22.13,
+      "tavgC": 17.75,
+      "dailyGdd": 11.36,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 333.34
+    },
+    {
+      "date": "2026-06-23",
+      "tminC": 15.03,
+      "tmaxC": 28.78,
+      "tavgC": 23.25,
+      "dailyGdd": 15.21,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 348.55
+    },
+    {
+      "date": "2026-06-24",
+      "tminC": 16.27,
+      "tmaxC": 27.41,
+      "tavgC": 22.31,
+      "dailyGdd": 15.14,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 363.69
+    },
+    {
+      "date": "2026-06-25",
+      "tminC": 17.28,
+      "tmaxC": 27.74,
+      "tavgC": 23.11,
+      "dailyGdd": 15.81,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 379.5
+    },
+    {
+      "date": "2026-06-26",
+      "tminC": 19.1,
+      "tmaxC": 32.89,
+      "tavgC": 27.05,
+      "dailyGdd": 17.85,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 397.35
+    },
+    {
+      "date": "2026-06-27",
+      "tminC": 18.52,
+      "tmaxC": 28.85,
+      "tavgC": 23.82,
+      "dailyGdd": 16.99,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 414.34
+    },
+    {
+      "date": "2026-06-28",
+      "tminC": 12.53,
+      "tmaxC": 25.33,
+      "tavgC": 20.49,
+      "dailyGdd": 12.23,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 426.57
+    },
+    {
+      "date": "2026-06-29",
+      "tminC": 13.56,
+      "tmaxC": 22.69,
+      "tavgC": 18.37,
+      "dailyGdd": 11.43,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 438
+    },
+    {
+      "date": "2026-06-30",
+      "tminC": 13.47,
+      "tmaxC": 22.83,
+      "tavgC": 18.72,
+      "dailyGdd": 11.45,
+      "source": "tomorrow.io",
+      "cumulativeGdd": 449.45
+    },
+    {
+>>>>>>> 8aaa610808e8bbd7c1ae2a8b81fb9699a38c5600
       "date": "2026-07-01",
       "tminC": 14.4,
       "tmaxC": 23.5,
       "tavgC": 19.8,
       "dailyGdd": 12.25,
       "source": "tomorrow.io",
+<<<<<<< HEAD
       "cumulativeGdd": 14.18
+=======
+      "cumulativeGdd": 461.7
+>>>>>>> 8aaa610808e8bbd7c1ae2a8b81fb9699a38c5600
     }
   ]
 }
