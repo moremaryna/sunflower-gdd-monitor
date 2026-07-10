@@ -1,4 +1,4 @@
-{
+﻿{
   "location": {
     "name": "Sunflower field",
     "slug": "sunflower-field",
@@ -9,11 +9,9 @@
     "seasonStart": "2026-05-07",
     "crop": "sunflower"
   },
-<<<<<<< HEAD
-  "lastUpdatedAt": "2026-07-02T19:42:11.363Z",
-=======
+
   "lastUpdatedAt": "2026-07-02T08:28:32.238Z",
->>>>>>> 8aaa610808e8bbd7c1ae2a8b81fb9699a38c5600
+
   "days": [
     {
       "date": "2026-05-16",
@@ -25,8 +23,7 @@
       "cumulativeGdd": 1.93
     },
     {
-<<<<<<< HEAD
-=======
+
       "date": "2026-05-17",
       "tminC": 4.94,
       "tmaxC": 14.38,
@@ -423,18 +420,17 @@
       "cumulativeGdd": 449.45
     },
     {
->>>>>>> 8aaa610808e8bbd7c1ae2a8b81fb9699a38c5600
+
       "date": "2026-07-01",
       "tminC": 14.4,
       "tmaxC": 23.5,
       "tavgC": 19.8,
       "dailyGdd": 12.25,
       "source": "tomorrow.io",
-<<<<<<< HEAD
-      "cumulativeGdd": 14.18
-=======
+
       "cumulativeGdd": 461.7
->>>>>>> 8aaa610808e8bbd7c1ae2a8b81fb9699a38c5600
+
     }
   ]
 }
+
